@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace Sleepsort
 {
@@ -9,7 +9,7 @@ namespace Sleepsort
         public int[] Sort(IEnumerable<int> source)
         {
             List<int> output = new List<int>();
-            source.AsParallel().ForAll(number =>
+            Parallel.ForEach(source, number =>
             {
                 Thread.Sleep(100 * number);
                 output.Add(number);
