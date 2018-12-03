@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Sleepsort")]
+[assembly: AssemblyTitle("Sleepsort.UnitTests")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("EPAM Systems")]
-[assembly: AssemblyProduct("Sleepsort")]
+[assembly: AssemblyProduct("Sleepsort.UnitTests")]
 [assembly: AssemblyCopyright("Copyright © EPAM Systems 2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("5a49a600-b2ed-4e4d-8c0a-2a9c5fe32612")]
+[assembly: Guid("ed344bf1-4431-4a5e-a894-119dd66e799f")]
 
 // Version information for an assembly consists of the following four values:
 //
