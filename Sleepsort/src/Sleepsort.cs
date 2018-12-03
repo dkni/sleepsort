@@ -9,8 +9,9 @@ namespace Sleepsort
     {
         public int[] TplSort(IEnumerable<int> source)
         {
-            List<int> output = new List<int>();
-            Parallel.ForEach(source, number =>
+            var fixedSource = source.ToArray();
+            List<int> output = new List<int>(fixedSource.Length);
+            Parallel.ForEach(fixedSource, number =>
             {
                 Thread.Sleep(100 * number);
                 output.Add(number);
@@ -20,8 +21,8 @@ namespace Sleepsort
 
         public int[] PlinqSort(IEnumerable<int> source)
         {
-            List<int> output = new List<int>();
             var fixedSource = source.ToArray();
+            List<int> output = new List<int>(fixedSource.Length);
             fixedSource.AsParallel()
                 .WithDegreeOfParallelism(fixedSource.Length)
                 .ForAll(number =>
