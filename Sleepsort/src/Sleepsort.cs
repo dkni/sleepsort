@@ -36,7 +36,15 @@ namespace Sleepsort
 
         public int[] TaskSort(IEnumerable<int> source)
         {
-            return source.OrderBy(x => x).ToArray();
+            var fixedSource = source.ToArray();
+            List<Task> tasks = new List<Task>(fixedSource.Length);
+            List<int> output = new List<int>(fixedSource.Length);
+            foreach(var number in source)
+            {
+                tasks.Add(Task.Run(() => { Thread.Sleep(100 * number); output.Add(number); }));
+            }
+            Task.WaitAll(tasks.ToArray());
+            return output.ToArray();
         }
     }
 }
