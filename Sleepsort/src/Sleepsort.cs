@@ -33,5 +33,10 @@ namespace Sleepsort
                 );
             return output.ToArray();
         }
+
+        public int[] TaskSort(IEnumerable<int> source)
+        {
+            return source.OrderBy(x => x).ToArray();
+        }
     }
 }
